@@ -1,4 +1,5 @@
 import Keyboard from "./components/keyboard/Keyboard";
+import Rules from "./components/rules/Rules";
 export default function Home() {
   return (
     <main className="MAIN">
@@ -16,10 +17,12 @@ export default function Home() {
           <strong>00:00</strong>
         </div>
       </div>
+      <Rules/>
       <div className="textBlock">
-      <p>ЭТО ПРОСТО ПИЗДЕЦ, ДАЖЕ ДЕМИ МУРЫЧ БЫ ЗАДУШИЛСЯ. ЕСЛИ ТАК БУДЕТ ПРОДОЛЖАТЬСЯ Я НАЛОЖУ СЕБЕ В РУКИ</p>
+      <p>ЗДЕСЬ МОГЛА БЫТЬ ВАША РЕКЛАМА</p>
       </div>
     <Keyboard />
+    
     </main>
   );
 }

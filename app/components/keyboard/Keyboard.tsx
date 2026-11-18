@@ -82,7 +82,7 @@ export default function Keyboard() {
                 onClick={() => setKeyy(",")}>,</div>
             </div>
             <div className="keyboardd" id="keyboard4">
-                <div className={`keySpase ${actKeyy === "" ? "active" : ""}`}
+                <div className={`${actKeyy === "" ? "active" : ""}`}
                 onClick={() => setKeyy("")}></div>
             </div>
         </div>
