@@ -5,7 +5,7 @@ export default function Keyboard() {
     const [actKeyy, setKeyy] = useState('')
     return(
         <div className="keyboard">
-            <div className="keyboardd">
+            <div className="keyboard_сontainer">
                 <div className={`key ${actKeyy === "Й" ? "active" : ""}`}
                 onClick={() => setKeyy("Й")}>Й</div>
                 <div className={`key ${actKeyy === "Ц" ? "active" : ""}`}
@@ -32,7 +32,7 @@ export default function Keyboard() {
                 onClick={() => setKeyy("Ъ")}>Ъ</div>
             </div>
 
-            <div className="keyboardd" id="keyboard2">
+            <div className="keyboard_сontainer" id="keyboard2">
                 <div className={`key ${actKeyy === "Ф" ? "active" : ""}`}
                 onClick={() => setKeyy("Ф")}>Ф</div>
                 <div className={`key ${actKeyy === "Ы" ? "active" : ""}`}
@@ -55,9 +55,11 @@ export default function Keyboard() {
                 onClick={() => setKeyy("Ж")}>Ж</div>
                 <div className={`key ${actKeyy === "Э" ? "active" : ""}`}
                 onClick={() => setKeyy("Э")}>Э</div>
+                <div className={`key ${actKeyy === "-" ? "active" : ""}`}
+                onClick={() => setKeyy("-")}>-</div>
             </div>
 
-            <div className="keyboardd" id="keyboard3">
+            <div className="keyboard_сontainer" id="keyboard3">
                 <div className={`key ${actKeyy === "Я" ? "active" : ""}`}
                 onClick={() => setKeyy("Я")}>Я</div>
                 <div className={`key ${actKeyy === "Ч" ? "active" : ""}`}
@@ -81,8 +83,8 @@ export default function Keyboard() {
                 <div className={`key ${actKeyy === "," ? "active" : ""}`}
                 onClick={() => setKeyy(",")}>,</div>
             </div>
-            <div className="keyboardd" id="keyboard4">
-                <div className={`${actKeyy === "" ? "active" : ""}`}
+            <div className="keySpase" id="keyboard4">
+                <div className={`keySpase ${actKeyy === "" ? "active" : ""}`}
                 onClick={() => setKeyy("")}></div>
             </div>
         </div>

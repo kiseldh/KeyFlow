@@ -7,6 +7,7 @@ export default function Rules() {
         <div>
      <button className="butt" onClick={() => setOpen(true)}>Правила</button>  
      {open && (
+        <div className="overlay">
         <div className="rul">
                 <div className="rul_window">
 
@@ -18,9 +19,11 @@ export default function Rules() {
             
             <button className="butt" id="butt2" onClick={() => setOpen(false)}>Закрыть</button>  
         </div>
+        </div>
      )
      }
      
      </div>
+     
     )
 }
