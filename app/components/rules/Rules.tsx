@@ -7,7 +7,7 @@ export default function Rules() {
         <div>
      <button className="butt" onClick={() => setOpen(true)}>Правила</button>  
      {open && (
-        <div className="overlay">
+        <div className="overlay" onClick={() => setOpen(false)}>
         <div className="rul">
                 <div className="rul_window">
 
