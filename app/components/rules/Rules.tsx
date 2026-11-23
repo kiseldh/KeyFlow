@@ -1,12 +1,24 @@
 "use client"
-import {useState} from "react" 
+import {useState, useEffect} from "react" 
 
 export default function Rules() {
     const [open, setOpen]=useState(false)
+    useEffect(() => {
+        function keyDown(event: KeyboardEvent){
+            if(event.key ==="Escape") {
+                setOpen(false);
+            }
+        }
+        document.addEventListener("keydown", keyDown)
+    return () => {
+        document.removeEventListener("keydown", keyDown)
+    }
+    },
+    )
     return(
         <div>
      <button className="butt" onClick={() => setOpen(true)}>Правила</button>  
-     {open && (
+     {open && ( 
         <div className="overlay" onClick={() => setOpen(false)}>
         <div className="rul">
                 <div className="rul_window">
