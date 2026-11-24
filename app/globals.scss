@@ -149,6 +149,20 @@ nav a {
         }
     }
 }
+.rul.close{
+    animation: modalClose 0.5s ease-in forwards;
+    
+    @keyframes modalClose {
+        from {
+            opacity:1;
+            transform: translateY(0);
+        }
+        to {
+            opacity: 0;
+            transform: translateY(120px);
+        }
+    }
+}
 
 .rul_window  {
     padding: 20px;

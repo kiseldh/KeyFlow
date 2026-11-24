@@ -3,10 +3,22 @@ import {useState, useEffect} from "react"
 
 export default function Rules() {
     const [open, setOpen]=useState(false)
+    const [close, setClose]=useState(false)
+    function closeModal() {
+        setClose(true)
+        setTimeout(()=>{
+            setOpen(false)
+            setClose(false)
+        },500)
+    }
     useEffect(() => {
         function keyDown(event: KeyboardEvent){
             if(event.key ==="Escape") {
-                setOpen(false);
+                setClose(true)
+        setTimeout(()=>{
+            setOpen(false)
+            setClose(false)
+        },500)
             }
         }
         document.addEventListener("keydown", keyDown)
@@ -19,8 +31,8 @@ export default function Rules() {
         <div>
      <button className="butt" onClick={() => setOpen(true)}>Правила</button>  
      {open && ( 
-        <div className="overlay" onClick={() => setOpen(false)}>
-        <div className="rul">
+        <div className="overlay" onClick={closeModal}>
+        <div className={`rul ${close ? "close" : ""}`}>
                 <div className="rul_window">
 
                     <h1>Тут будут правила</h1>
@@ -29,7 +41,7 @@ export default function Rules() {
                     
                 </div>
             
-            <button className="butt" id="butt2" onClick={() => setOpen(false)}>Закрыть</button>  
+            <button className="butt" id="butt2" onClick={closeModal}>Закрыть</button>  
         </div>
         </div>
      )
